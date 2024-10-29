@@ -26,7 +26,6 @@ LOCAL_SHARED_LIBRARIES := \
     libbinder \
     libhardware \
     liblog \
-    libcamera_client \
     libgui_vendor \
     libhidlbase \
     libsensor_vendor \
@@ -37,7 +36,8 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_STATIC_LIBRARIES := \
     libarect \
     libbase \
-    libminui
+    libminui \
+    android.hardware.camera.common@1.0-helper
 
 LOCAL_CFLAGS += -DGAIA_FW_BETA
 
@@ -81,7 +81,6 @@ LOCAL_SHARED_LIBRARIES := \
     libbinder \
     libhardware \
     liblog \
-    libcamera_client \
     libgui_vendor \
     libhidlbase \
     libsensor_vendor \
@@ -92,7 +91,8 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_STATIC_LIBRARIES := \
     libarect \
     libbase \
-    libminui
+    libminui \
+    android.hardware.camera.common@1.0-helper
 
 LOCAL_CFLAGS += -DGAIA_FW_BETA
 
@@ -108,9 +108,8 @@ else
 LOCAL_CFLAGS += -DBACK_ROTATION=0
 endif
 
+LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := camera.$(TARGET_BOOTLOADER_BOARD_NAME)
 LOCAL_VENDOR_MODULE := true
-
-LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)

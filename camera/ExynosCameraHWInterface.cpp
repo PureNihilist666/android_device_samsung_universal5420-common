@@ -722,7 +722,7 @@ int HAL_getCameraInfo(int cameraId, struct camera_info *info)
         return -EINVAL;
     }
 
-    memcpy(info, &sCameraInfo[cameraId], sizeof(CameraInfo));
+    memcpy(info, &sCameraInfo[cameraId], sizeof(sCameraInfo));
     info->device_version = CAMERA_DEVICE_API_VERSION_1_0;
 
     return NO_ERROR;

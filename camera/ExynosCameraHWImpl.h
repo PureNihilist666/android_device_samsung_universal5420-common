@@ -26,14 +26,16 @@
 #include <binder/MemoryHeapBase.h>
 #include <hardware/camera.h>
 #include <hardware/gralloc.h>
-#include <camera/Camera.h>
-#include <camera/CameraParameters.h>
+#include <CameraParameters.h>
 #include <media/hardware/MetadataBufferType.h>
 
 #include <fcntl.h>
 #include <sys/mman.h>
 
 #include "ExynosCameraHWInterface.h"
+
+using ::android::hardware::camera::common::V1_0::helper::CameraParameters;
+using ::android::hardware::camera::common::V1_0::helper::Size;
 
 namespace android {
 
