@@ -43,7 +43,7 @@ LOCAL_CFLAGS += -DGAIA_FW_BETA
 
 LOCAL_C_INCLUDES += \
     system/media/camera/include \
-    framworks/av/include/camera \
+    frameworks/av/include/camera \
     frameworks/native/headers/media_plugin
 
 LOCAL_SRC_FILES:= \
@@ -69,7 +69,7 @@ LOCAL_MODULE_RELATIVE_PATH := hw
 
 LOCAL_C_INCLUDES += \
     system/media/camera/include \
-    framworks/av/include/camera \
+    frameworks/av/include/camera \
     frameworks/native/headers/media_plugin
 
 LOCAL_SRC_FILES := \
